@@ -14,3 +14,18 @@ provider "aws" {
   region = "us-east-1"
 }
 
+variables.tf
+Stores reusable values:
+
+hcl
+variable "instance_type" {
+  default = "t2.micro"
+}
+
+variable "ami" {
+  default = "ami-12345678"
+}
+
+variable "key_name" {
+  default = "my-key"
+}
