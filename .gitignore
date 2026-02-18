@@ -1,0 +1,13 @@
+# Ignore Terraform local files
+.terraform/
+*.tfstate
+*.tfstate.backup
+crash.log
+
+# Ignore provider binaries
+*.zip
+*.tar.gz
+
+# Ignore system files
+.DS_Store
+
