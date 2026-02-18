@@ -13,11 +13,12 @@ Defines the cloud provider and region:
 provider "aws" {
   region = "us-east-1"
 }
+```
 
 ### variables.tf
 Stores reusable values:
 
-'''hcl
+```hcl
 variable "instance_type" {
   default = "t2.micro"
 }
@@ -29,11 +30,12 @@ variable "ami" {
 variable "key_name" {
   default = "my-key"
 }
+```
 
-main.tf
+### main.tf
 Core resource definition:
 
-hcl
+```hcl
 resource "aws_instance" "my_ec2" {
   ami           = var.ami
   instance_type = var.instance_type
@@ -43,11 +45,13 @@ resource "aws_instance" "my_ec2" {
     Name = "DevOps-Project-01"
   }
 }
+```
 
-output.tf
+### output.tf
 Prints useful info after deployment:
 
-hcl
+```hcl
 output "instance_public_ip" {
   value = aws_instance.my_ec2.public_ip
 }
+```
